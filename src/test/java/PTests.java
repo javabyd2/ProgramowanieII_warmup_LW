@@ -7,9 +7,12 @@ import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.Matchers.hasSize;
 import static org.junit.Assert.assertThat;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 
 public class PTests {
 
@@ -42,7 +45,20 @@ public class PTests {
 
         assertThat(result[0], equalTo(Arrays.asList("a", "c", "d")));
         assertThat(result[1], equalTo("b"));
-
     }
-
+//    @Test
+//    public void shouldReturnAListOfThreeRandomSelectedElements() throws Exception {
+//        List<String> result =
+//                PTestImpl.randomSelect(
+//                        Arrays.asList(
+//                                "a", "b", "c", "d", "e", "f", "g", "h"), 3);
+//        assertThat(result, hasSize(3));
+//    }
+//    @Test
+//    public void shouldFlattenAListOfList() throws Exception {
+//        List<String> flatten = PTestImpl.flatten(
+//                asList("a", asList("b", asList("c", "d")), "e"));
+//        assertThat(flatten, hasSize(5));
+//        assertThat(flatten, hasItems("a", "b", "c", "d", "e"));
+//    }
 }
