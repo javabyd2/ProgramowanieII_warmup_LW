@@ -42,18 +42,17 @@ public class PTestImpl {
         return afterChanges;
     }
 
-//    public static <T> List<T> randomSelect(List<T> lista, int b) {
-//        Random random = new Random();
-//
-//        List<T> list = new ArrayList<>(lista);
-//
-//        for (int i = 0; i < 3; i++) {
-//            int g = random.nextInt(lista.size());
-//            list.add(lista.get(g));
-//            System.out.println(list.get(g));
-//        }
-//        return list;
-//    }
+    public static <T> List<T> randomSelect(List<T> lista, int b) {
+        Random random = new Random();
+
+        List<T> list = new ArrayList<>();
+
+        for (int i = 0; i < b; i++) {
+            int g = random.nextInt(lista.size());
+            list.add(lista.get(g));
+        }
+        return list;
+    }
 //    public static <T> List<T> flatten(List<T> lista, Class<T> elementType){
 //
 //        return lista

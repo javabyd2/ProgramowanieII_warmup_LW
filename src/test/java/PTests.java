@@ -46,14 +46,14 @@ public class PTests {
         assertThat(result[0], equalTo(Arrays.asList("a", "c", "d")));
         assertThat(result[1], equalTo("b"));
     }
-//    @Test
-//    public void shouldReturnAListOfThreeRandomSelectedElements() throws Exception {
-//        List<String> result =
-//                PTestImpl.randomSelect(
-//                        Arrays.asList(
-//                                "a", "b", "c", "d", "e", "f", "g", "h"), 3);
-//        assertThat(result, hasSize(3));
-//    }
+    @Test
+    public void shouldReturnAListOfThreeRandomSelectedElements() throws Exception {
+        List<String> result =
+                PTestImpl.randomSelect(
+                        Arrays.asList(
+                                "a", "b", "c", "d", "e", "f", "g", "h"), 3);
+        assertThat(result, hasSize(3));
+    }
 //    @Test
 //    public void shouldFlattenAListOfList() throws Exception {
 //        List<String> flatten = PTestImpl.flatten(
