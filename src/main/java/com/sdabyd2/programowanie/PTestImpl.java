@@ -46,10 +46,15 @@ public class PTestImpl {
         Random random = new Random();
 
         List<T> list = new ArrayList<>();
+        Set<Integer> numbersToLoss = new HashSet<>();
 
-        for (int i = 0; i < b; i++) {
-            int g = random.nextInt(lista.size());
-            list.add(lista.get(g));
+        while(numbersToLoss.size()<b){
+            numbersToLoss.add(random.nextInt(lista.size()));
+        }
+        List<Integer> listToRandom = new ArrayList<>(numbersToLoss);
+        for (int i = 0; i < listToRandom.size(); i++) {
+
+            list.add(lista.get(listToRandom.get(i)));
         }
         return list;
     }
